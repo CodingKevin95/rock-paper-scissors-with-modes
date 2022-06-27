@@ -106,13 +106,13 @@ function userNameStart() {
 
      //Use name to greet character
      let Greeting = [
-        {string: `What a lovely name! Welcome to our innovative, never before seen, newly created, 100% original game called: `, speed: 75},
+        {string: `What a lovely name! Welcome to our innovative, never before seen, newly created, 100% original game called: `, speed: 50},
         {string: "ROCK, ", speed: 1},
         {string: "...", speed: 300},
         {string: " PAPER,", speed: 1},
         {string: "...", speed: 300},
         {string: "SCISSORS!", speed: 1},
-        {string: `Whenever you're ready ${enteredName}, please click next.`, speed: 75}
+        {string: `Whenever you're ready ${enteredName}, please click next.`, speed: 50}
     ]
 
      let characters = [];
@@ -140,7 +140,7 @@ function userNameStart() {
         let button1 = document.createElement("button");
         button1.textContent = "Next"
         button1.className = "bottomNext";
-        setTimeout(function(){document.querySelector('.textcomputer').appendChild(button1)}, 10000);
+        setTimeout(function(){document.querySelector('.textcomputer').appendChild(button1)}, 8500);
         button1.addEventListener('click', async () => {
             button1.style.visibility = 'hidden'
             document.querySelectorAll('.revealed').forEach(function(a) {
@@ -231,7 +231,7 @@ function userNameStart() {
             let letsPlayButton = document.createElement("button");
             letsPlayButton.textContent = "Heavy Hands"
             letsPlayButton.className = "playButton";
-            setTimeout(function(){document.querySelector('.textcomputer').appendChild(letsPlayButton)}, 5500);
+            setTimeout(function(){document.querySelector('.textcomputer').appendChild(letsPlayButton)}, 6000);
             
             // Hover to show stats
             letsPlayButton.addEventListener('mouseover', async () => {
@@ -557,17 +557,15 @@ function userNameStart() {
             let healingHands = document.createElement("button");
             healingHands.textContent = "Healing Hands"
             healingHands.className = "healingHands";
-            setTimeout(function(){document.querySelector('.textcomputer').appendChild(healingHands)}, 5500);
+            setTimeout(function(){document.querySelector('.textcomputer').appendChild(healingHands)}, 6000);
 
             healingHands.addEventListener('mouseover', async () => {
                 let healingHandsInfo = document.createElement("div");
-                // healingHandsInfo.textContent = "Healing Hands"
                 healingHandsInfo.className = "healingHandsInfo";
                 document.querySelector('.gameplay').appendChild(healingHandsInfo)
 
                 let healingHandStats = document.createElement('div');
                 healingHandStats.className = "healingHandStats"
-                // healingHandStats.textContent = "Winning = Deducts 1.25 points from opponet's total \n Losing = Deducts 2 points from player's total \n Tying = Heals/Increase player's points by .5";
                 document.querySelector('.healingHandsInfo').innerHTML += "Winning = Deducts 1.25 points from opponent's total <br> Losing = Deducts 2 points from your total <br> Tying = Increase .5 points to your total"
                 document.querySelector('.healingHandsInfo').appendChild(healingHandStats);
             })
@@ -806,19 +804,16 @@ function userNameStart() {
                 case 'rockscissor':
                 case 'paperrock':
                 case 'scissorpaper':
-                    // console.log('User win')
                     win(userChoice, computerChoice);
                     break;
                 case 'paperscissor':
                 case 'scissorrock':
                 case 'rockpaper':
-                    // console.log('User lost')
                     lose(userChoice, computerChoice);
                     break;
                 case 'scissorscissor':
                 case 'paperpaper':
                 case 'rockrock':
-                    // console.log('Tie')
                     tie(userChoice,computerChoice);
                     break;
             }
@@ -839,7 +834,6 @@ function userNameStart() {
             document.querySelector('.computerIcon').appendChild(brokenLight);
         
             function main() {
-            //Click able rock
             let clickRock = document.createElement('img');
             clickRock.className = "clickRock";
             clickRock.src = 'rock.png';
@@ -881,19 +875,16 @@ function userNameStart() {
             let normalGame = document.createElement("button");
             normalGame.textContent = "Normal Hands"
             normalGame.className = "normalGame";
-            setTimeout(function(){document.querySelector('.textcomputer').appendChild(normalGame)}, 5500);
+            setTimeout(function(){document.querySelector('.textcomputer').appendChild(normalGame)}, 6000);
 
             normalGame.addEventListener('mouseover', async () => {
                 let normalGameInfo = document.createElement("div");
-                // healingHandsInfo.textContent = "Healing Hands"
                 normalGameInfo.className = "healingHandsInfo";
                 document.querySelector('.gameplay').appendChild(normalGameInfo)
 
                 let normalGameStats = document.createElement('div');
                 normalGameStats.className = "healingHandStats"
-                // healingHandStats.textContent = "Winning = Deducts 1.25 points from opponet's total \n Losing = Deducts 2 points from player's total \n Tying = Heals/Increase player's points by .5";
                 document.querySelector('.healingHandsInfo').innerHTML += "Winning = Deducts 2 points from opponent's total <br> Losing = Deducts 2 points from your total <br> Tying = Nothing happens"
-                // document.querySelector('.normalGameInfo').appendChild(normalGameStats);
             })
 
             normalGame.addEventListener('mouseout', async () => {
@@ -1129,19 +1120,17 @@ function userNameStart() {
                 case 'rockscissor':
                 case 'paperrock':
                 case 'scissorpaper':
-                    // console.log('User win')
+
                     win(userChoice, computerChoice);
                     break;
                 case 'paperscissor':
                 case 'scissorrock':
                 case 'rockpaper':
-                    // console.log('User lost')
                     lose(userChoice, computerChoice);
                     break;
                 case 'scissorscissor':
                 case 'paperpaper':
                 case 'rockrock':
-                    // console.log('Tie')
                     tie(userChoice,computerChoice);
                     break;
             }
@@ -1162,7 +1151,6 @@ function userNameStart() {
             document.querySelector('.computerIcon').appendChild(brokenLight);
         
             function main() {
-            //Click able rock
             let clickRock = document.createElement('img');
             clickRock.className = "clickRock";
             clickRock.src = 'rock.png';
