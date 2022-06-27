@@ -111,7 +111,7 @@ function userNameStart() {
         {string: "...", speed: 300},
         {string: " PAPER,", speed: 1},
         {string: "...", speed: 300},
-        {string: "SCISSORS!!!", speed: 1},
+        {string: "SCISSORS!", speed: 1},
         {string: `Whenever you're ready ${enteredName}, please click next.`, speed: 75}
     ]
 
@@ -140,7 +140,7 @@ function userNameStart() {
         let button1 = document.createElement("button");
         button1.textContent = "Next"
         button1.className = "bottomNext";
-        setTimeout(function(){document.querySelector('.textcomputer').appendChild(button1)}, 6500);
+        setTimeout(function(){document.querySelector('.textcomputer').appendChild(button1)}, 10000);
         button1.addEventListener('click', async () => {
             button1.style.visibility = 'hidden'
             document.querySelectorAll('.revealed').forEach(function(a) {
